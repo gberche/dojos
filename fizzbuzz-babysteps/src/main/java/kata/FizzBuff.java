@@ -4,7 +4,9 @@ package kata;
  *
  */
 public class FizzBuff {
+    int currentIndex = 0;
     public String getNextLine() {
-        return "1" + "\n";
+        currentIndex++;
+        return currentIndex + "\n";
     }
 }

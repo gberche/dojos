@@ -60,7 +60,7 @@ public class FizzBuzzTest {
     @Test
     @Ignore
     public void fizzBuzzShouldReturnSecondExpectedLine() {
-        assertExpectedLineReturned(0);
+        assertExpectedLineReturned(1);
     }
 
     private void assertExpectedLineReturned(int lineIndex) {
