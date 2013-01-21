@@ -1,7 +1,6 @@
 package kata;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
@@ -30,7 +29,7 @@ public class FizzBuzzTest {
             "17\n",
             "Fizz\n",
             "19\n",
-            "Buzz"};
+            "Buzz\n"};
     private FizzBuff fizzBuff;
 
     @Before
@@ -49,18 +48,12 @@ public class FizzBuzzTest {
 
     @Test
     public void fizzBuzzShouldReturnExpectedLines() {
-        for (int currentLine=1; currentLine< 15; currentLine++) {
+        for (int currentLine=1; currentLine< 21; currentLine++) {
             assertExpectedLineReturned(currentLine);
         }
     }
-    @Test
-    @Ignore
-    public void fizzBuzzShouldReturn_Fizz_on_All_samples() {
-        int max = 101;
-        for (int currentLine=1; currentLine< max; currentLine++) {
-            assertExpectedLineReturned(currentLine);
-        }
-    }
+
+
 
 
     /**
