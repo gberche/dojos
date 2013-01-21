@@ -51,6 +51,13 @@ public class FizzBuzzTest {
             assertExpectedLineReturned(currentLine);
         }
     }
+    @Test
+    public void fizzBuzzShouldReturn_Fizz_on_3rd_sample() {
+        int max = 4;
+        for (int currentLine=1; currentLine< max; currentLine++) {
+            assertExpectedLineReturned(currentLine);
+        }
+    }
 
 
     /**
