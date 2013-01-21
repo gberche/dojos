@@ -40,15 +40,16 @@ public class FizzBuzzTest {
 
 
     @Test
-    public void fizzBuzzShouldReturnNonNullNextLine() {
-        String nextLine = fizzBuff.getNextLine();
-        assertThat(nextLine).isNotNull();
+    public void fizzBuzzShouldAlwaysReturnNonNullNextLine() {
+        for (int currentLine=1; currentLine< 100; currentLine++) {
+            String nextLine = fizzBuff.getNextLine();
+            assertThat(nextLine).isNotNull();
+        }
     }
 
     @Test
     public void fizzBuzzShouldReturnExpectedLines() {
-        int max = 5;
-        for (int currentLine=1; currentLine< max; currentLine++) {
+        for (int currentLine=1; currentLine< 5; currentLine++) {
             assertExpectedLineReturned(currentLine);
         }
     }
