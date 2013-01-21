@@ -1,6 +1,7 @@
 package kata;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
@@ -10,6 +11,26 @@ import static org.fest.assertions.Assertions.assertThat;
  */
 public class FizzBuzzTest {
 
+    private static final String[] EXPECTED_LINES = {"1\n",
+            "2\n",
+            "Fizz\n",
+            "4\n",
+            "Buzz\n",
+            "Fizz\n",
+            "7\n",
+            "8\n",
+            "Fizz\n",
+            "Buzz\n",
+            "11\n",
+            "Fizz\n",
+            "13\n",
+            "14\n",
+            "FizzBuzz\n",
+            "16\n",
+            "17\n",
+            "Fizz\n",
+            "19\n",
+            "Buzz"};
     private FizzBuff fizzBuff;
 
     @Before
@@ -25,29 +46,17 @@ public class FizzBuzzTest {
     }
 
     @Test
+    @Ignore
     public void fizzBuzzShouldReturnExpectedLines() {
-        String [] lines = {"1\n",
-                "2\n",
-                "Fizz\n",
-                "4\n",
-                "Buzz\n",
-                "Fizz\n",
-                "7\n",
-                "8\n",
-                "Fizz\n",
-                "Buzz\n",
-                "11\n",
-                "Fizz\n",
-                "13\n",
-                "14\n",
-                "FizzBuzz\n",
-                "16\n",
-                "17\n",
-                "Fizz\n",
-                "19\n",
-                "Buzz"};
+        String [] lines = EXPECTED_LINES;
         String nextLine = fizzBuff.getNextLine();
         assertThat(nextLine).isNotNull();
+    }
+
+    @Test
+    public void fizzBuzzShouldReturnFirstExpectedLine() {
+        String nextLine = fizzBuff.getNextLine();
+        //assertThat(nextLine).isEqualTo(EXPECTED_LINES[0]);
     }
 
 
