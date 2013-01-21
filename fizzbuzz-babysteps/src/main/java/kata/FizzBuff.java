@@ -9,14 +9,14 @@ public class FizzBuff {
         String currentLine;
         boolean multipleOfThree = currentIndex % 3 == 0;
         boolean multipleOf5 = currentIndex % 5 == 0;
-        if (multipleOfThree) {
+        if (multipleOfThree && multipleOf5) {
+            currentLine = "FizzBuzz";
+        } else if (multipleOfThree) {
             currentLine = "Fizz";
-        } else {
-            if (multipleOf5) {
+        } else if (multipleOf5) {
                 currentLine = "Buzz";
-            } else {
+        } else {
                 currentLine = Integer.toString(currentIndex) ;
-            }
         }
         currentIndex++;
         return currentLine+ "\n";
