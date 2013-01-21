@@ -46,16 +46,10 @@ public class FizzBuzzTest {
     }
 
     @Test
-    @Ignore
     public void fizzBuzzShouldReturnExpectedLines() {
-        String [] lines = EXPECTED_LINES;
-        String nextLine = fizzBuff.getNextLine();
-        assertThat(nextLine).isNotNull();
-    }
-
-    @Test
-    public void fizzBuzzShouldReturnFirstExpectedLine() {
-        assertExpectedLineReturned(0);
+        for (int currentLine=0; currentLine<1; currentLine++) {
+            assertExpectedLineReturned(currentLine);
+        }
     }
     @Test
     @Ignore
