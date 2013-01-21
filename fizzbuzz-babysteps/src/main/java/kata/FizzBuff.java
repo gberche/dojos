@@ -8,11 +8,11 @@ public class FizzBuff {
     public String getNextLine() {
         String currentLine;
         if (currentIndex %3 == 0) {
-            currentLine = "Fizz"+ "\n";
+            currentLine = "Fizz";
         } else {
-            currentLine = currentIndex + "\n";
+            currentLine = Integer.toString(currentIndex) ;
         }
         currentIndex++;
-        return currentLine;
+        return currentLine+ "\n";
     }
 }
