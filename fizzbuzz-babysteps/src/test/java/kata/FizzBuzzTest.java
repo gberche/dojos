@@ -49,7 +49,7 @@ public class FizzBuzzTest {
 
     @Test
     public void fizzBuzzShouldReturnExpectedLines() {
-        for (int currentLine=1; currentLine< 5; currentLine++) {
+        for (int currentLine=1; currentLine< 15; currentLine++) {
             assertExpectedLineReturned(currentLine);
         }
     }
