@@ -55,8 +55,17 @@ public class FizzBuzzTest {
 
     @Test
     public void fizzBuzzShouldReturnFirstExpectedLine() {
+        assertExpectedLineReturned(0);
+    }
+    @Test
+    @Ignore
+    public void fizzBuzzShouldReturnSecondExpectedLine() {
+        assertExpectedLineReturned(0);
+    }
+
+    private void assertExpectedLineReturned(int lineIndex) {
         String nextLine = fizzBuff.getNextLine();
-        //assertThat(nextLine).isEqualTo(EXPECTED_LINES[0]);
+        assertThat(nextLine).isEqualTo(EXPECTED_LINES[lineIndex]);
     }
 
 
