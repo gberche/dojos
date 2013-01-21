@@ -8,6 +8,6 @@ public class KataTest {
 
     @Test
     public void whenFooIsCalled_thenItReturnsBar() {
-        assertThat(new Foo().foo()).isEqualTo("bar");
+        assertThat(new Foo().foo()).isEqualTo("qix");
     }
 }
