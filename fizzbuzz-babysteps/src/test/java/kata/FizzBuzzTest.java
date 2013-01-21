@@ -55,8 +55,8 @@ public class FizzBuzzTest {
     }
     @Ignore
     @Test
-    public void fizzBuzzShouldReturn_Fizz_on_Next_sample() {
-        int max = 6;
+    public void fizzBuzzShouldReturn_Fizz_on_All_samples() {
+        int max = 101;
         for (int currentLine=1; currentLine< max; currentLine++) {
             assertExpectedLineReturned(currentLine);
         }
@@ -69,7 +69,7 @@ public class FizzBuzzTest {
      */
     private void assertExpectedLineReturned(int lineIndex) {
         String nextLine = fizzBuff.getNextLine();
-        assertThat(nextLine).isEqualTo(EXPECTED_LINES[lineIndex -1]);
+        assertThat(nextLine).overridingErrorMessage("for line:" + lineIndex).isEqualTo(EXPECTED_LINES[lineIndex - 1]);
     }
 
 }
