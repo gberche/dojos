@@ -3,6 +3,8 @@ package kata;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.fest.assertions.Assertions.assertThat;
+
 /**
  * Edited in at-home2
  */
@@ -17,8 +19,10 @@ public class FizzBuzzTest {
 
 
     @Test
-    public void fizzBuzzShouldReturnNextLine() {
+    public void fizzBuzzShouldReturnNonNullNextLine() {
         String nextLine = fizzBuff.getNextLine();
-        //assertThat(new Foo().foo()).isEqualTo("qix");
+        assertThat(nextLine).isNotNull();
     }
+
+
 }
