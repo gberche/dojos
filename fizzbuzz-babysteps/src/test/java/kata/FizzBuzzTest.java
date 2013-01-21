@@ -17,7 +17,8 @@ public class FizzBuzzTest {
 
 
     @Test
-    public void fizzBuzzShouldInstanciate() {
-
+    public void fizzBuzzShouldReturnNextLine() {
+        String nextLine = fizzBuff.getNextLine();
+        //assertThat(new Foo().foo()).isEqualTo("qix");
     }
 }
