@@ -47,7 +47,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void fizzBuzzShouldReturnExpectedLines() {
+    public void fizzBuzzShouldReturnExpectedLinesFromSample() {
         for (int currentLine=1; currentLine< 21; currentLine++) {
             assertExpectedLineReturned(currentLine);
         }
