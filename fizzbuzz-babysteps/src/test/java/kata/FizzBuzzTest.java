@@ -46,16 +46,20 @@ public class FizzBuzzTest {
 
     @Test
     public void fizzBuzzShouldReturnExpectedLines() {
-        int max = 2;
-        for (int currentLine=0; currentLine< max; currentLine++) {
+        int max = 3;
+        for (int currentLine=1; currentLine< max; currentLine++) {
             assertExpectedLineReturned(currentLine);
         }
     }
 
 
+    /**
+     *
+     * @param lineIndex index starting from 1
+     */
     private void assertExpectedLineReturned(int lineIndex) {
         String nextLine = fizzBuff.getNextLine();
-        assertThat(nextLine).isEqualTo(EXPECTED_LINES[lineIndex]);
+        assertThat(nextLine).isEqualTo(EXPECTED_LINES[lineIndex -1]);
     }
 
 }
