@@ -35,5 +35,8 @@ public class FizzBuzzTest {
         FizzBuzz buzzer = new FizzBuzz();
         String value = buzzer.buildValue(1);
         assertThat(value).isEqualTo("1");
+        value = buzzer.buildValue(2);
+        assertThat(value).isEqualTo("2");
+
     }
 }

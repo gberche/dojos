@@ -5,6 +5,11 @@ package kata;
  */
 public class FizzBuzz {
     public String buildValue(int i) {
-        return "1";
+              if (i == 1)  {
+
+                  return "1";
+              }          else {
+                  return "2";
+              }
     }
 }
