@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.fest.assertions.Assertions.assertThat;
 
 /**
- * comment
+ * comment       jhhghj
  */
 public class KataTest {
 
@@ -13,4 +13,7 @@ public class KataTest {
     public void whenFooIsCalled_thenItReturnsBar() {
         assertThat(new Foo().foo()).isEqualTo("bar");
     }
+
+
+
 }
