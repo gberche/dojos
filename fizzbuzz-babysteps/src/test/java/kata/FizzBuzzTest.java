@@ -2,6 +2,8 @@ package kata;
 
 import org.junit.Test;
 
+import static org.fest.assertions.Assertions.assertThat;
+
 /**
  *
  */
@@ -30,6 +32,8 @@ public class FizzBuzzTest {
                 "19" ,
                 "Buzz"};
 
-
+        FizzBuzz buzzer = new FizzBuzz();
+        String value = buzzer.buildValue(1);
+        assertThat(value).isEqualTo("1");
     }
 }
