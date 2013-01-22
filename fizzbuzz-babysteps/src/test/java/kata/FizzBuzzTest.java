@@ -13,19 +13,19 @@ public class FizzBuzzTest {
     @Test
     public void test() {
         String [] expected = { magicNumber ,
-                "2" ,
+                magicNumber ,
                 "Fizz" ,
-                "4" ,
+                magicNumber ,
                 "Buzz" ,
                 "Fizz" ,
-                "7" ,
-                "8" ,
+                magicNumber ,
+                magicNumber ,
                 "Fizz" ,
                 "Buzz" ,
-                "11" ,
+                magicNumber ,
                 "Fizz" ,
-                "13" ,
-                "14" ,
+                magicNumber ,
+                magicNumber ,
                 "FizzBuzz" ,
 
             //
