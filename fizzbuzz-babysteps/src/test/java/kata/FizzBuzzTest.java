@@ -33,8 +33,12 @@ public class FizzBuzzTest {
                 "Buzz"};
 
         FizzBuzz buzzer = new FizzBuzz();
-        assertValue(buzzer, 1, "1");
-        assertValue(buzzer, 2, "2");
+
+        for(  int index = 1; index<=2;index++) {
+            assertValue(buzzer, index, Integer.toString(index));
+
+        }
+
     }
 
     private void assertValue(FizzBuzz buzzer, int index, String expected1) {
