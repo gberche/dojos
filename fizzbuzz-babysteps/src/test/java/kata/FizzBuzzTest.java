@@ -35,8 +35,7 @@ public class FizzBuzzTest {
         FizzBuzz buzzer = new FizzBuzz();
 
         for(  int index = 1; index<=2;index++) {
-            assertValue(buzzer, index, Integer.toString(index));
-
+            assertValue(buzzer, index, expected[index-1]);
         }
 
     }
