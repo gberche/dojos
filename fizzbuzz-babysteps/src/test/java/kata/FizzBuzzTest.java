@@ -33,10 +33,12 @@ public class FizzBuzzTest {
                 "Buzz"};
 
         FizzBuzz buzzer = new FizzBuzz();
-        String value = buzzer.buildValue(1);
-        assertThat(value).isEqualTo("1");
-        value = buzzer.buildValue(2);
-        assertThat(value).isEqualTo("2");
+        assertValue(buzzer, 1, "1");
+        assertValue(buzzer, 2, "2");
+    }
 
+    private void assertValue(FizzBuzz buzzer, int index, String expected1) {
+        String value = buzzer.buildValue(index);
+        assertThat(value).isEqualTo(expected1);
     }
 }
