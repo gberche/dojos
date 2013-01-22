@@ -8,10 +8,11 @@ import static org.fest.assertions.Assertions.assertThat;
  *
  */
 public class FizzBuzzTest {
+    String magicNumber = "X";
 
     @Test
     public void test() {
-        String [] expected = {"1" ,
+        String [] expected = { magicNumber ,
                 "2" ,
                 "Fizz" ,
                 "4" ,
@@ -55,6 +56,9 @@ public class FizzBuzzTest {
 
     private void assertValue(FizzBuzz buzzer, int index, String expected1) {
         String value = buzzer.buildValue(index);
+        if (expected1.equals(magicNumber)) {
+            expected1 = Integer.toString(index);
+        }
         assertThat(value).isEqualTo(expected1);
     }
 }
