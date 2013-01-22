@@ -28,28 +28,12 @@ public class FizzBuzzTest {
                 magicNumber ,
                 "FizzBuzz" ,
 
-            //
-                "16" ,
-                "17" ,
-                "Fizz" ,
-                "19" ,
-                "Buzz" ,
-                "Fizz" ,
-                "22" ,
-                "23" ,
-                "Fizz" ,
-                "Buzz" ,
-                "26" ,
-                "Fizz" ,
-                "28" ,
-                "29" ,
-                "FizzBuzz" ,
           };
 
         FizzBuzz buzzer = new FizzBuzz();
 
-        for(  int index = 1; index<=30;index++) {
-            assertValue(buzzer, index, expected[index-1]);
+        for(  int index = 1; index<=500;index++) {
+            assertValue(buzzer, index, expected[(index-1)%15]);
         }
 
     }
