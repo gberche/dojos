@@ -1,11 +1,9 @@
 From http://cyber-dojo.com/
 
-http://en.wikipedia.org/wiki/Reversi
-
 Reversi is a board game for two players. The board contains
 8x8 squares. The players place Black or White counters onto
 the board, one counter per square. More information can be
-found on Wikipedia en.wikipedia.org/wiki/Reversi?. Your task
+found on Wikipedia http://en.wikipedia.org/wiki/Reversi . Your task
 is to write a program that takes a current board position
 together with information about whose turn it is, and returns
 a list of the legal moves for that player. A move is only
