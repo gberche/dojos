@@ -25,22 +25,20 @@ public class GateDriverTest {
 
 
             //Given
-            Encoder encoder = mock(Encoder.class);
+            Encoder encoder = new StringEncoder();
             Connector connector = new StdoutConnector();
 
             byte[] openGateBytes = "OB2".getBytes();
-            when(encoder.encodeOpenGate()).thenReturn(openGateBytes);
 
             GateDriver gateDriver = new GateDriver();
             gateDriver.setEncoder(encoder);
+            gateDriver.setConnector(connector);
 
             //when
             gateDriver.openGate();
 
             //then
             String writtenString = new String(out.toByteArray());
-            verify(encoder.encodeOpenGate());
-            verify(connector).sendMessage(openGateBytes);
 
             assertThat(writtenString).isEqualTo("OB2");
         } finally {
