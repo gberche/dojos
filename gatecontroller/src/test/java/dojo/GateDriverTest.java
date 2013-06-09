@@ -26,7 +26,7 @@ public class GateDriverTest {
 
             //Given
             Encoder encoder = mock(Encoder.class);
-            Connector connector = mock(Connector.class);
+            Connector connector = new StdoutConnector();
 
             byte[] openGateBytes = "OB2".getBytes();
             when(encoder.encodeOpenGate()).thenReturn(openGateBytes);
