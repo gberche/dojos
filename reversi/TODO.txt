@@ -1,0 +1,2 @@
+getNextLegalMovesFromPosition(currentPlayerCell);
+getCurrentPlayerCells(currentPlayer);

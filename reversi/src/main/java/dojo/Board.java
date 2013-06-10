@@ -17,8 +17,26 @@ public class Board {
     }
     
 	public String getNextLegalMoves(char currentPlayer) {
-        return null;
+        Board boardWithLegalMoves = new Board();
+        boardWithLegalMoves.initBoard(this.toString());
+
+        List<Coordinate> positionList = getCurrentPlayerCells(currentPlayer);
+
+        for (Coordinate currentPlayerCell : positionList) {
+            List<Coordinate> cellPositions = getNextLegalMovesFromPosition(currentPlayerCell);
+
+            boardWithLegalMoves.markCellsAsLegalMove(cellPositions);
+        }
+        return boardWithLegalMoves.toString();
 	}
+
+    protected List<Coordinate> getNextLegalMovesFromPosition(Coordinate currentPlayerCell) {
+        return null;
+    }
+
+    protected List<Coordinate> getCurrentPlayerCells(char currentPlayer) {
+        return null;
+    }
 
 
     private Coordinate getCellPositionFromCellArrayIndex(int index) {
@@ -26,12 +44,12 @@ public class Board {
     }
 
     protected char getCellAt(Coordinate cellPosition) {
-        return cells[9*cellPosition.x + cellPosition.y];
+        return cells[cellPosition.x + 9*cellPosition.y];
     }
 
 
     private void markCellAsLegalMove(Coordinate cellPosition) {
-        cells[9*cellPosition.x + cellPosition.y] = LEGAL_MOVE;
+        cells[cellPosition.x + 9*cellPosition.y] = LEGAL_MOVE;
     }
 
     protected void markCellsAsLegalMove(List<Coordinate> cellPositions) {
