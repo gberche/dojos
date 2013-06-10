@@ -5,6 +5,8 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mockito;
 
+import java.util.List;
+
 import static java.util.Arrays.asList;
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.when;
@@ -48,6 +50,13 @@ public class DojoTest {
     }
 
     @Test
+    public void provides_current_player_cells() {
+        board.initBoard(INITIAL_STATE);
+        List<Coordinate> currentPlayerCells = board.getCurrentPlayerCells(BLACK);
+        assertThat(currentPlayerCells).isEqualTo(asList(new Coordinate(3, 3), new Coordinate(4, 4)));
+    }
+
+    @Test
     public void guides_get_the_next_legal_moves() {
         board = Mockito.spy(board);
         board.initBoard(
@@ -69,13 +78,13 @@ public class DojoTest {
         String nextState = board.getNextLegalMoves(BLACK);
         assertThat(nextState).isEqualTo(
                 "........\n" +
-                "........\n" +
-                "....0...\n" +
-                "...BW0..\n" +
-                "..0WB...\n" +
-                "...0....\n" +
-                "........\n" +
-                "........");
+                        "........\n" +
+                        "....0...\n" +
+                        "...BW0..\n" +
+                        "..0WB...\n" +
+                        "...0....\n" +
+                        "........\n" +
+                        "........");
     }
 
 

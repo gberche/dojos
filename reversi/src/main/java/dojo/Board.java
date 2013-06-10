@@ -1,5 +1,6 @@
 package dojo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,7 +36,16 @@ public class Board {
     }
 
     protected List<Coordinate> getCurrentPlayerCells(char currentPlayer) {
-        return null;
+        ArrayList<Coordinate> currentPlayerCells = new ArrayList<Coordinate>();
+        for (int y=0; y<8; y++) {
+            for (int x=0; x<8; x++) {
+                Coordinate cellPosition = new Coordinate(x, y);
+                if (getCellAt(cellPosition) == currentPlayer) {
+                    currentPlayerCells.add(cellPosition);
+                }
+            }
+        }
+        return currentPlayerCells;
     }
 
 
