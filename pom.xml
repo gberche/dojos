@@ -12,6 +12,8 @@
 
     <modules>
         <module>fizzbuzz-babysteps</module>
+        <module>cash-register</module>
+<!--        <module>fizzbuzz-babysteps</module> -->
     </modules>
 
 </project>
